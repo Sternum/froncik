@@ -9,30 +9,31 @@ interface LoginFormProps {
 
 const LoginForm:FunctionComponent<LoginFormProps> = ({onLogin}: LoginFormProps) => {
 
-    // const login = async () => {
-    //     const response = await fetch('https://sanproject.azurewebsites.net/Auth/Login', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             "access-control-allow-origin" : "*",
-    //         },
-    //         body: JSON.stringify({
-    //             username: 'test997',
-    //             password: 'haslo123'
-    //         })
-    //     });
-    //
-    //     const result = await response.text();
-    //     redirect('/auth/main');
-    // }
+    const login = async () => {
+        const response = await fetch('https://sanproject.azurewebsites.net/Auth/Login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                "access-control-allow-origin" : "*",
+            },
+            body: JSON.stringify({
+                username: 'test997',
+                password: 'haslo123'
+            })
+        });
 
-    const dupa = async () => {
-        try {
-            onLogin();
-        } catch (e) {
-            console.log(e)
-        }
+        const result = await response.text();
+        console.log(result);
+        // redirect('/auth/main');
     }
+
+    // const dupa = async () => {
+    //     try {
+    //         onLogin();
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
     return (
         <div className={styles.loginoverlay}>
@@ -50,7 +51,7 @@ const LoginForm:FunctionComponent<LoginFormProps> = ({onLogin}: LoginFormProps) 
                 </div>
                 <div className={styles.additionalInfo}>Additional Info</div>
             </div>
-            <button className={styles.buttons} onClick={() => dupa()}>
+            <button className={styles.buttons} onClick={() => login()}>
                 <b className={styles.text}>Login</b>
             </button>
             <div className={styles.lineParent}>
