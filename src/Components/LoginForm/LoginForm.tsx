@@ -37,6 +37,7 @@ const LoginForm:FunctionComponent<LoginFormProps> = ({onLogin}: LoginFormProps) 
 
     return (
         <div className={styles.loginoverlay}>
+            <h1>Aloha</h1>
             <b className={styles.welcome}>WELCOME</b>
             <img className={styles.frameIcon} alt="" src="Frame.svg" />
             <div className={styles.inputField}>
