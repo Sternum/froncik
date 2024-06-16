@@ -1,0 +1,21 @@
+.rectangleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    border-radius: 50px;
+    background-color: #98c8f3;
+    height: 113px;
+    margin: 12px 26px 54px 26px;
+}
+
+.logoIcon {
+    width: 335px;
+    position: relative;
+    border-radius: 50px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 80px;
+    object-fit: cover;
+}
+

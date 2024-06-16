@@ -1,0 +1,98 @@
+.signIn {
+    position: relative;
+    font-size: 40px;
+    color: #000;
+    text-align: right;
+}
+.frameIcon {
+    width: 33px;
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.enterInput {
+    position: relative;
+}
+.enterInputWrapper {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+}
+.additionalInfo {
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+    color: #000;
+}
+.inputField {
+    width: 837px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.frameDiv {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.inputField3 {
+    width: 837px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.text {
+    position: relative;
+    letter-spacing: 0.08em;
+}
+.buttons {
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: #b9daf7;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 13px 50px;
+    text-align: center;
+    color: #000;
+    font-family: Outfit;
+}
+.property1signin {
+    width: 725px;
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    background-color: #fff0e6;
+    border: 1px solid #6b2e00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 19px;
+    gap: 39px 725px;
+    text-align: left;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.51);
+    font-family: Roboto;
+}
+

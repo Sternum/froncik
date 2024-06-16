@@ -1,0 +1,117 @@
+.profilepicture {
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    height: 100px;
+}
+.nazwaUytkownika {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    letter-spacing: 0.08em;
+    line-height: 150%;
+    font-weight: 600;
+}
+.ileCzasuTemu {
+    position: absolute;
+    top: 38px;
+    left: 4px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    line-height: 150%;
+    text-transform: capitalize;
+    opacity: 0.6;
+}
+.nazwaUytkownikaParent {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    width: 209px;
+    height: 62px;
+}
+.text {
+    position: relative;
+    letter-spacing: 0.06em;
+}
+.buttons {
+    position: absolute;
+    top: 0px;
+    left: 759px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    background-color: #b9daf7;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 32px;
+    font-family: Roboto;
+}
+.groupParent {
+    width: 821px;
+    position: relative;
+    height: 63px;
+}
+.tytuNewsa {
+    position: absolute;
+    top: 0px;
+    left: 393px;
+    letter-spacing: 0.08em;
+    line-height: 150%;
+    text-transform: capitalize;
+}
+.witajcieWMagicznym {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    font-size: 24px;
+    font-family: Roboto;
+    white-space: pre-wrap;
+    text-align: justify;
+    display: -webkit-inline-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    width: 957px;
+}
+.tytuNewsaParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 957px;
+    height: 286px;
+}
+.postsInner {
+    width: 957px;
+    position: relative;
+    height: 286px;
+    font-size: 32px;
+}
+.posts {
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    background-color: #fff0e6;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 34px;
+    box-sizing: border-box;
+    gap: 20px 30px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    font-family: Outfit;
+}
+
