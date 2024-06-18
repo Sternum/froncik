@@ -19,3 +19,32 @@
     object-fit: cover;
 }
 
+.navButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 0px;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 12px;
+    overflow: hidden;
+    background-color: #fff0e6;
+}
+
+.navButtonIcon {
+    z-index: 10;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+

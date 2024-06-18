@@ -1,60 +1,45 @@
 'use client'
-import { FunctionComponent } from 'react';
+import {FunctionComponent, useState} from 'react';
 import styles from './LoginForm.module.css';
-import {redirect} from "next/navigation";
+import {login} from "@/Actions/Login";
+import {log} from "util";
 
-interface LoginFormProps {
-    onLogin: () => void;
-}
+const LoginForm:FunctionComponent = () => {
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(undefined);
 
-const LoginForm:FunctionComponent<LoginFormProps> = ({onLogin}: LoginFormProps) => {
-
-    const login = async () => {
-        const response = await fetch('https://sanproject.azurewebsites.net/Auth/Login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                "access-control-allow-origin" : "*",
-            },
-            body: JSON.stringify({
-                username: 'test997',
-                password: 'haslo123'
-            })
-        });
-
-        const result = await response.text();
-        console.log(result);
-        // redirect('/auth/main');
+    const onLoginHandle = async () => {
+        setLoading(true);
+        await login();
+        setLoading(false);
     }
-
-    // const dupa = async () => {
-    //     try {
-    //         onLogin();
-    //     } catch (e) {
-    //         console.log(e)
-    //     }
-    // }
 
     return (
         <div className={styles.loginoverlay}>
-            <h1>Aloha</h1>
             <b className={styles.welcome}>WELCOME</b>
             <img className={styles.frameIcon} alt="" src="Frame.svg" />
-            <div className={styles.inputField}>
-                <div className={styles.enterInputWrapper}>
-                    <div className={styles.enterInput}>Login...</div>
-                </div>
-                <div className={styles.additionalInfo}>Additional Info</div>
-            </div>
-            <div className={styles.inputField1}>
-                <div className={styles.enterInputContainer}>
-                    <div className={styles.enterInput}>Password...</div>
-                </div>
-                <div className={styles.additionalInfo}>Additional Info</div>
-            </div>
-            <button className={styles.buttons} onClick={() => login()}>
-                <b className={styles.text}>Login</b>
-            </button>
+            {loading ? <div>Loading....</div> :
+            <>
+            <form action={onLoginHandle} className={styles.formContainer} >
+                <input
+                    name="login"
+                    type={"text"}
+                    className={[styles.enterInput, styles.inputField, styles.enterInputWrapper].join(' ')}
+                    placeholder={"Login"}
+                />
+                <input
+                    name="login"
+                    type={"password"}
+                    className={[styles.enterInput, styles.inputField, styles.enterInputWrapper].join(' ')}
+                    placeholder={"Password"}
+                />
+                <input
+                    name="login"
+                    type={"submit"}
+                    className={styles.buttons}
+                    value={"Login"}
+                />
+            </form>
             <div className={styles.lineParent}>
                 <img className={styles.groupChild} alt="" src="Line 4.svg" />
                 <b className={styles.or}>OR</b>
@@ -62,6 +47,8 @@ const LoginForm:FunctionComponent<LoginFormProps> = ({onLogin}: LoginFormProps) 
                     <b className={styles.text}>Sign In</b>
                 </div>
             </div>
+            </>
+            }
         </div>);
 };
 
